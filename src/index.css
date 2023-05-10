@@ -1,0 +1,42 @@
+main {
+    display: grid;
+    grid-template:
+        "grid right" 1fr
+        "bottom ." min-content
+        / 1fr 200px;
+    gap: 2rem;
+    height: 100vh;
+    padding: 2rem;
+}
+
+.x-grid {
+    grid-area: grid;
+    display: grid;
+    grid-template-columns: repeat(var(--columns, 1), 1fr);
+    gap: 1rem;
+    place-content: center;
+}
+
+.x-grid button {
+    aspect-ratio: 1;
+}
+
+.right {
+    grid-area: right;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom {
+    grid-area: bottom;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+button {
+    margin: 0;
+}
